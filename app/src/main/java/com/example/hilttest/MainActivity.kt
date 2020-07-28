@@ -30,6 +30,4 @@ class MainActivity : AppCompatActivity() {
         }
         tvLabelAgenda.text = agendaStringBuilder
     }
-
-
 }
