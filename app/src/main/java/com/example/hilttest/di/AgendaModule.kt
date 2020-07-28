@@ -16,10 +16,10 @@ class AgendaModule {
     @Provides
     fun provideListContacts(): List<Contact> {
         return listOf(
-            Contact("Ann", "555-5555"),
-            Contact("Leo", "444-4444"),
-            Contact("Abril", "333-3333"),
-            Contact("Moy", "222-2222")
+            Contact("Anahi", "555-5555"),
+            Contact("Mauricio", "444-4444"),
+            Contact("Rodrigo", "333-3333"),
+            Contact("Mirella", "222-2222")
         )
     }
 
