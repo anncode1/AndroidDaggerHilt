@@ -1,4 +1,4 @@
-package com.example.hilttest.domain.model
+package com.example.hilttest.domain.agenda.model
 
 /**
  * Created by anahi.salgado on 27/07/2020

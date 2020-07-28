@@ -1,9 +1,10 @@
-package com.example.hilttest
+package com.example.hilttest.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.hilttest.domain.model.Agenda
-import com.example.hilttest.domain.model.Contact
+import com.example.hilttest.R
+import com.example.hilttest.domain.agenda.model.Agenda
+import com.example.hilttest.domain.agenda.model.Contact
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
