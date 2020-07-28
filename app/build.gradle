@@ -52,4 +52,14 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
+    // Activity Ktx for by viewModels()
+    //implementation "androidx.activity:activity-ktx:1.1.0"
+
+    //ViewModel & LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    //Hilt for ViewModel
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_jetpack"
+    kapt "androidx.hilt:hilt-compiler:$hilt_jetpack"
 }
