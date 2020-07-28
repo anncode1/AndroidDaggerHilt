@@ -1,4 +1,4 @@
-package com.example.hilttest.domain.model.catfacts.model
+package com.example.hilttest.domain.catfacts.model
 
 import com.google.gson.annotations.SerializedName
 
