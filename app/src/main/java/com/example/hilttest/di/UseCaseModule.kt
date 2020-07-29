@@ -16,5 +16,8 @@ import dagger.hilt.android.components.ApplicationComponent
 class UseCaseModule {
 
     @Provides
-    fun providesGetCatRandomFact(catFactRepository: CatFactRepository): GetCatRandomFact = GetCatRandomFactImpl(catFactRepository)
+    fun providesGetCatRandomFact(
+        catFactRepository: CatFactRepository
+    ): GetCatRandomFact = GetCatRandomFactImpl(catFactRepository)
 }
+

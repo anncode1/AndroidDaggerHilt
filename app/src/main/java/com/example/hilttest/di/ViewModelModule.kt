@@ -15,5 +15,8 @@ import dagger.hilt.android.components.ApplicationComponent
 class ViewModelModule {
 
     @Provides
-    fun providesMainViewModel(getCatRandomFact: GetCatRandomFact): MainViewModel = MainViewModel(getCatRandomFact)
+    fun providesMainViewModel(
+        getCatRandomFact: GetCatRandomFact
+    ): MainViewModel = MainViewModel(getCatRandomFact)
 }
+

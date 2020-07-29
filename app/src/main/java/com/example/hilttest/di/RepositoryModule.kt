@@ -16,5 +16,9 @@ import dagger.hilt.android.components.ApplicationComponent
 class RepositoryModule {
 
     @Provides
-    fun providesCatFactRepository(catFactsService: CatFactsService): CatFactRepository = CatFactRepositoryImpl(catFactsService)
+    fun providesCatFactRepository(
+        catFactsService: CatFactsService
+    ): CatFactRepository = CatFactRepositoryImpl(catFactsService)
 }
+
+
