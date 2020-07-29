@@ -9,5 +9,5 @@ import retrofit2.http.GET
  */
 interface CatFactsService {
     @GET("/facts/random")
-    fun getCatRandomFact(): Response<Fact>
+    suspend fun getCatRandomFact(): Response<Fact>
 }

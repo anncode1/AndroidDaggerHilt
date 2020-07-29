@@ -8,5 +8,5 @@ import retrofit2.Response
  * Created by anahi.salgado on 28/07/2020
  */
 interface CatFactRepository {
-    fun getCatRandomFact(): Response<Fact>
+    suspend fun getCatRandomFact(): Response<Fact>
 }

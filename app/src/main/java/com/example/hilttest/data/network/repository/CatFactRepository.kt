@@ -12,5 +12,5 @@ import retrofit2.Response
 class CatFactRepository(
     private val catFactsService: CatFactsService
 ): CatFactRepository {
-    override fun getCatRandomFact(): Response<Fact> = catFactsService.getCatRandomFact()
+    override suspend fun getCatRandomFact(): Response<Fact> = catFactsService.getCatRandomFact()
 }
