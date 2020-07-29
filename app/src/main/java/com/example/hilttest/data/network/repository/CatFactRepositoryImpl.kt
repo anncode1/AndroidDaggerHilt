@@ -9,7 +9,7 @@ import retrofit2.Response
 /**
  * Created by anahi.salgado on 28/07/2020
  */
-class CatFactRepository(
+class CatFactRepositoryImpl(
     private val catFactsService: CatFactsService
 ): CatFactRepository {
     override suspend fun getCatRandomFact(): Response<Fact> = catFactsService.getCatRandomFact()

@@ -7,6 +7,8 @@ import retrofit2.Response
 /**
  * Created by anahi.salgado on 28/07/2020
  */
-class GetCatRandomFactImpl(private val catFactRepository: CatFactRepository): GetCatRandomFact {
+class GetCatRandomFactImpl(
+    private val catFactRepository: CatFactRepository
+): GetCatRandomFact {
     override suspend fun invoke(): Response<Fact> = catFactRepository.getCatRandomFact()
 }
