@@ -7,6 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import javax.inject.Singleton
 
 /**
  * Created by anahi.salgado on 29/07/2020
@@ -15,6 +16,7 @@ import dagger.hilt.android.components.ApplicationComponent
 @InstallIn(ApplicationComponent::class)
 class RepositoryModule {
 
+    @Singleton
     @Provides
     fun providesCatFactRepository(
         catFactsService: CatFactsService

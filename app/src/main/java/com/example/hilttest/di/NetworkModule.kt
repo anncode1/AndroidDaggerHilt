@@ -20,9 +20,13 @@ class NetworkModule {
     @Provides
     fun provideCatFactsApi(): CatFactsService {
         return Retrofit.Builder()
-            .baseUrl("https://cat-fact.herokuapp.com")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CatFactsService::class.java)
+    }
+
+    companion object {
+        const val BASE_URL = "https://cat-fact.herokuapp.com"
     }
 }
