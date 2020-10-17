@@ -20,20 +20,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        showContactList()
-        showAgenda()
+//        showContactList()
+//        showAgenda()
 
-//        mainViewModel.getCatFact()
-//        observeCatFact()
+        observeCatFact()
+        btn_get_cat_fact.setOnClickListener {
+            mainViewModel.getCatFact()
+        }
 
     }
 
     private fun observeCatFact() {
         mainViewModel.catFact.observe(this@MainActivity, Observer {
             when (it) {
-                is CatFactStates.Loading -> tvLabelContacts.setText(R.string.loading)
-                is CatFactStates.CatFactData -> tvLabelContacts.text = "Id: ${it.fact.id} Text: ${it.fact.text}"
-                is CatFactStates.Error -> tvLabelContacts.text = "Error: ${it.error.message}"
+                is CatFactStates.Loading -> tv_text.setText(R.string.loading)
+                is CatFactStates.CatFactData -> tv_text.text = it.fact.text
+                is CatFactStates.Error -> tv_text.text = "Error: ${it.error.message}"
             }
         })
     }
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         agenda.contacts.forEach {
             agendaStringBuilder.append(it)
         }
-        tvLabelAgenda.text = agendaStringBuilder
+        //tvLabelAgenda.text = agendaStringBuilder
     }
 
     private fun showContactList() {
@@ -52,6 +54,6 @@ class MainActivity : AppCompatActivity() {
         contacts.forEach {
             contactsStringBuilder.append(it)
         }
-        tvLabelContacts.text = contactsStringBuilder
+        //tvLabelContacts.text = contactsStringBuilder
     }
 }
