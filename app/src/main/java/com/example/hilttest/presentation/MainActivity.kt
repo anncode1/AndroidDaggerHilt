@@ -1,7 +1,8 @@
 package com.example.hilttest.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.example.hilttest.R
 import com.example.hilttest.domain.agenda.model.Agenda
 import com.example.hilttest.domain.agenda.model.Contact
@@ -21,6 +22,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         showContactList()
         showAgenda()
+
+//        mainViewModel.getCatFact()
+//        observeCatFact()
+
+    }
+
+    private fun observeCatFact() {
+        mainViewModel.catFact.observe(this@MainActivity, Observer {
+            when (it) {
+                is CatFactStates.Loading -> tvLabelContacts.setText(R.string.loading)
+                is CatFactStates.CatFactData -> tvLabelContacts.text = "Id: ${it.fact.id} Text: ${it.fact.text}"
+                is CatFactStates.Error -> tvLabelContacts.text = "Error: ${it.error.message}"
+            }
+        })
     }
 
     private fun showAgenda() {

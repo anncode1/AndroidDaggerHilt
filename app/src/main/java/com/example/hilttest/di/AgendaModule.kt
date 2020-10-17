@@ -5,13 +5,13 @@ import com.example.hilttest.domain.agenda.model.Contact
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.android.components.ActivityComponent
 
 /**
  * Created by anahi.salgado on 27/07/2020
  */
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(ActivityComponent::class)
 class AgendaModule {
 
     @Provides

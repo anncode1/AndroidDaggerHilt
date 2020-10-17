@@ -7,6 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
 
 /**
  * Created by anahi.salgado on 29/07/2020
@@ -15,6 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 @InstallIn(ApplicationComponent::class)
 class NetworkModule {
 
+    @Singleton
     @Provides
     fun provideCatFactsApi(): CatFactsService {
         return Retrofit.Builder()

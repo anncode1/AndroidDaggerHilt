@@ -8,4 +8,5 @@ import com.example.hilttest.domain.catfacts.model.Fact
 sealed class CatFactStates {
     object Loading: CatFactStates()
     data class CatFactData(val fact: Fact): CatFactStates()
+    data class Error(val error: Throwable): CatFactStates()
 }
